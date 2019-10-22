@@ -34,7 +34,7 @@ module.exports.run = (client, message, args) => {
       if (elt.due != null) {
         let end = new Date(elt.due);
         let diff = dateDiff(start, end);
-        if (diff.day <= 0 && diff.hour < 0 && diff.min < 0 && diff.sec <= 0) {
+        if (diff.day <= 0 && diff.hour <= 0 && diff.min <= 0 && diff.sec <= 0) {
           return;
         }
         embed.addField(
